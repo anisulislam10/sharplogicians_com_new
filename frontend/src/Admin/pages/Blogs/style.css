@@ -1,0 +1,159 @@
+
+:root {
+    --editor-height: 300px;
+  }
+  
+  .text-editor {
+width: 586px;
+height: 50px;
+background-color: rgb(255, 255, 255);
+position: fixed;
+margin-right: 20px;
+
+
+
+
+  }
+  .ql-editor {
+    margin-top: 2px;
+    min-height: var(--editor-height);
+    background-color: rgb(255, 255, 255);
+
+    
+  }
+  
+  #toolbar {
+    position: sticky;  /* Keep the toolbar fixed at the top of the viewport */
+    top: 0;            /* Position it at the top */
+    z-index: 1000;     /* Make sure it's above other content */
+    background-color: rgb(255, 255, 255);  /* Toolbar background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
+    transition: none;  /* No transition needed if it stays visible */
+}
+  
+  .custom-em {
+    border: solid;  
+    
+  }
+  
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* max-height: calc(0.5 * var(--editor-height)); */
+    /* border-radius: 20%; */
+  }
+
+  /* EditBlog Component Styles */
+.edit-blog-page {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    margin-left: 400px;
+}
+
+.edit-blog-page h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.form-group input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group p {
+    font-size: 0.875rem;
+    color: #555;
+    margin-top: 8px;
+}
+
+button.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+
+.react-quill {
+    height: 300px;
+}
+
+.react-quill .ql-toolbar {
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #ccc;
+}
+
+.react-quill .ql-container {
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    .edit-blog-page {
+        padding: 15px;
+    }
+
+    .edit-blog-page h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-group textarea,
+    .form-group input[type="file"],
+    button.btn-primary {
+        font-size: 0.875rem;
+    }
+}
+.ql-editor video {
+  
+  }
+  

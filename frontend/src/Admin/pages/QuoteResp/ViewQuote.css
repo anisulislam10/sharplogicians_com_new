@@ -1,0 +1,20 @@
+.view-quote-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-left: 300px;
+    margin-top: 100px;
+    /* background-color: #ffffff; */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+
+
+#td {
+    text-align: center;
+}

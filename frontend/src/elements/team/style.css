@@ -1,0 +1,24 @@
+/* Initially, hide the icons and set up the transition */
+.social-icon {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    padding: 0;
+    z-index: 2;
+    list-style: none;
+    display: flex;
+    margin: 0 -10px;
+    opacity: 0;  /* Initially hidden */
+    pointer-events: none;  /* Prevent interaction when hidden */
+    transform: translateY(-20px);  /* Initially moved up */
+    transition: opacity 0.3s ease, transform 0.3s ease;  /* Transition effect */
+  }
+  
+  /* When hovering over the parent card (e.g., .team), show the icons */
+  .team:hover .social-icon {  /* Trigger the effect when hovering over the .team */
+    opacity: 1;  /* Make the icons visible */
+    pointer-events: all;  /* Enable interaction */
+    transform: translateY(0);  /* Reset position */
+    margin-top: -380px;
+  }
+  
