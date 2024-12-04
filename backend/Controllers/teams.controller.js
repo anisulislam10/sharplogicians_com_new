@@ -60,6 +60,8 @@ export const getTeam = async (req, res) => {
         });
       }
   
+      console.log("Get Team Hitted..");
+      
       // Get total count team member us items for pagination
       const total = await OurTeams.countDocuments();
   

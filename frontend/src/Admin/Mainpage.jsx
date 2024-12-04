@@ -14,7 +14,7 @@ import Client from "./pages/ClientPage";
 import EditClient from "./pages/EditClient";
 import SignIn from "./pages/auth/Signin";
 
-import "./app.css";
+import "./App.css";
 import { SiAboutdotme } from "react-icons/si";
 import { BsFillChatQuoteFill, BsInfoCircle, BsQuote } from "react-icons/bs";
 import AddAbout from "./pages/About-us/Add_about_us";
