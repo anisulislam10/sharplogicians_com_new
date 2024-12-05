@@ -232,7 +232,7 @@ Slider Default Style
                     }
 
                     @media #{$sm-layout} {
-                        font-size: 36px;
+                        font-size: 30px;
                         line-height: 64px;
                     }
                 }
@@ -784,11 +784,16 @@ Slick Animation For Slider
 }
 
 .bg_image--16 {
+    background-image: url('./../../images/bg/bg-image-26.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; /* Example: Full viewport height */
+    width: 100%;
     @media #{$sm-layout} {
-        background-position: 71% center;
+        background-position: 71% center; /* Adjusts position for smaller screens */
     }
 }
-
 /*--------------------------------------
 Slider Default Button And Dot STyle
 ---------------------------------------*/

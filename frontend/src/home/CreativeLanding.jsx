@@ -23,6 +23,7 @@ import aboutImg from "../assets/images/about/about-3.jpg";
 import ScrollSpy from "../component/common/ScrollSpy";
 import AboutUs from "./AboutUs";
 import QuoteForm from "../component/header/QuoteForm";
+import bgImage from './../../src/assets/images/bg/bg-image-26.jpg'
 
 const SlideList = [
   {
@@ -78,7 +79,7 @@ class CreativeLanding extends Component {
       // Existing portfolio method remains unchanged
       axios.get(import.meta.env.VITE_API_API_GET_PORTFOLIO)
         .then(response => {
-          console.log("bloggggsssss",response);
+          // console.log("bloggggsssss",response);
 
           this.setState({ data: response.data, isLoading: false });
         })
@@ -87,7 +88,7 @@ class CreativeLanding extends Component {
         });
         axios.get(import.meta.env.VITE_API_BASE_URL_GET_BLOG)
         .then(response => {
-          console.log("bloggggsssss",response);
+          // console.log("bloggggsssss",response);
           
           this.setState({ blogs:  response.data.blog, isBlogLoading: false });
         })
@@ -202,7 +203,13 @@ class CreativeLanding extends Component {
 
         {/* Start Slider Area   */}
         <div className="slider-activation slider-creative-agency" id="home">
-          <div className="bg_image bg_image--26" data-black-overlay="6">
+          <div  data-black-overlay="6" style={{
+           backgroundImage: `url(${bgImage})`,
+
+           backgroundSize: 'cover',
+           backgroundRepeat: 'no-repeat',
+           backgroundPosition: 'center',
+  }}>
             {SlideList.map((value, index) => (
               <div
                 className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center"
