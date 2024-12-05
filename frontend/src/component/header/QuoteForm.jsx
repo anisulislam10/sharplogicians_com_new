@@ -32,7 +32,7 @@ const QuoteForm = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/admin/quote_service/get");
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL_BUDGED_GET }`);
         console.log("Fetched services:", response.data.quotes);
         
         setServicesOptions(response.data.quotes); // Assuming the response contains an array of services
