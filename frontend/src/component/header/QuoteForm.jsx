@@ -25,7 +25,7 @@ const QuoteForm = () => {
   const [servicesOptions, setServicesOptions] = useState([]); // State to hold dynamic services
   const formRef = useRef();
 
-  const budgetOptions = ["Low", "Medium", "High"];
+  const budgetOptions = ["$10-$99", "$100-$500", "$500+"];
   const startOptions = ["Immediately", "Within a week", "Within a month", "Later"];
 
   // Fetch services dynamically from the backend
@@ -66,7 +66,9 @@ const QuoteForm = () => {
       };
     try {
       // Send data to backend using Axios
-      const response = await axios.post('http://localhost:3000/api/admin/quote/post', updatedFormData, {
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_BASE_URL_BUDGED }`,
+         updatedFormData, {
         headers: {
           'Content-Type': 'application/json',
         },

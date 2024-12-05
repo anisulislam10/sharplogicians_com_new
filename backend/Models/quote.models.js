@@ -9,7 +9,7 @@ const quoteSchema = new mongoose.Schema({
   website: { type: String },
   servicesRequired: { type: [String], required: false },
   projectOverview: { type: String },
-  budget: { type: String, enum: ['Low', 'Medium', 'High'] },
+  budget: { type: String, enum: ['$10-$99', '$100-$500', '$500+'] },
   readyToStart: { type: String, required: true },
 }, { timestamps: true });
 
