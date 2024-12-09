@@ -28,9 +28,11 @@ const __dirname = path.dirname(__filename);
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors()); // Disable custom CORS settings for debugging
+
 
 // Updated CORS configuration
-const allowedOrigins = [`${process.env.LOCAL_HOST_NAME}5173`, `${process.env.LOCAL_HOST_NAME}3000`,  `${process.env.LOCAL_HOST_NAME}5175`];
+const allowedOrigins = [`${process.env.LOCAL_HOST_NAME}5173`, `${process.env.LOCAL_HOST_NAME}3000`,  `${process.env.LOCAL_HOST_NAME}5175`,`${process.env.LOCAL_HOST_NAME}3001`,];
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin || allowedOrigins.includes(origin)) {
