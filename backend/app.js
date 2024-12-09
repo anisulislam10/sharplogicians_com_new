@@ -48,17 +48,17 @@ app.use(cors({
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Endpoints 
-app.use("/api/admin/auth", AdminRoute);
-app.use("/api/admin/services", servicesRoutes);
-app.use("/api/admin/portfolio", portfolioRoutes);
-app.use("/api/admin/client", ourClientsRoutes);
-app.use("/api/admin/about",aboutUSRoutes);
-app.use("/api/admin/team",teamsRoutes);
-app.use("/api/admin/testimonial",testimonialRoutes);
-app.use("/api/admin/contact",contactRoutes);
-app.use("/api/admin/blogs",blogRoutes)
-app.use("/api/admin/quote",quoteRoutes)
-app.use("/api/admin/quote_service",QuoteServiceRoutes)
+app.use("/new/api/admin/auth", AdminRoute);
+app.use("/new/api/admin/services", servicesRoutes);
+app.use("/new/api/admin/portfolio", portfolioRoutes);
+app.use("/new/api/admin/client", ourClientsRoutes);
+app.use("/new/api/admin/about",aboutUSRoutes);
+app.use("/new/api/admin/team",teamsRoutes);
+app.use("/new/api/admin/testimonial",testimonialRoutes);
+app.use("/new/api/admin/contact",contactRoutes);
+app.use("/new/api/admin/blogs",blogRoutes)
+app.use("/new/api/admin/quote",quoteRoutes)
+app.use("/new/api/admin/quote_service",QuoteServiceRoutes)
 
 
 
