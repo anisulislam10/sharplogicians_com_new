@@ -16,4 +16,7 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    port: 3001 // Set the port to 3001
+  }
 });
