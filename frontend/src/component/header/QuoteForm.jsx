@@ -37,8 +37,8 @@ const QuoteForm = () => {
         
         setServicesOptions(response.data.quotes); // Assuming the response contains an array of services
       } catch (error) {
-        console.error("Error fetching services:", error);
-        toast.error("An error occurred while fetching the services.");
+        console.error("Error fetching Quote Form:", error);
+        toast.error("An error occurred while fetching  Quote Form");
       }
     };
 
