@@ -24,7 +24,7 @@ export const addClient = async (req, res) => {
   
       const newClient = new OurClient({
         image: `${process.env.LOCAL_HOST_NAME}/${image}`, 
-      });
+      }); 
   
       await newClient.save();
   
