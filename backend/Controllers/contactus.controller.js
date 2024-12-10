@@ -24,7 +24,7 @@ export const addContact = async (req, res) => {
 
     try {
         // Check if a contact with the same logo already exists
-        const existingContact = await Contact.findOne({ image: `${process.env.LOCAL_HOST_NAME}${process.env.PORT}/${image}` });
+        const existingContact = await Contact.findOne({ image: `${process.env.LOCAL_HOST_NAME}/${image}` });
         if (existingContact) {
             return res.status(400).json({
                 status: false,
@@ -34,7 +34,7 @@ export const addContact = async (req, res) => {
 
         // Create a new contact
         const newContact = new Contact({
-            image: `${process.env.LOCAL_HOST_NAME}${process.env.PORT}/${image}`,
+            image: `${process.env.LOCAL_HOST_NAME}/${image}`,
             phoneNo,
             email,
             location,
@@ -147,7 +147,7 @@ export const updateContact = async (req, res) => {
         }
 
         // Update fields if provided
-        if (image) contact.image = `${process.env.LOCAL_HOST_NAME}${process.env.PORT}/${image}`;
+        if (image) contact.image = `${process.env.LOCAL_HOST_NAME}/${image}`;
         if (email) contact.email = email;
         if (phoneNo) contact.phoneNo = phoneNo;
         if (location) contact.location = location;

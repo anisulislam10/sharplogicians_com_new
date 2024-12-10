@@ -34,7 +34,7 @@ export const addPortfolio = async (req, res) => {
   try {
     const portfolio = new Portfolio({
       title,
-      image: `${process.env.LOCAL_HOST_NAME}${process.env.PORT}/${image}`,
+      image: `${process.env.LOCAL_HOST_NAME}/${image}`,
       // video: video ? `http://localhost:${process.env.PORT}/${video}` : "",
  
       type,
@@ -183,7 +183,7 @@ export const updatePortfolioItems = async (req, res) => {
     //     portfolio.video = `http://localhost:${process.env.PORT}/${video}`;
     //  }
       if (image){
-         portfolio.image = `${process.env.LOCAL_HOST_NAME}${process.env.PORT}/${image}`;
+         portfolio.image = `${process.env.LOCAL_HOST_NAME}/${image}`;
       }
       if (type) portfolio.type = type;
 
