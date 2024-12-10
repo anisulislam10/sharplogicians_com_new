@@ -31,8 +31,20 @@ app.use(cookieParser());
 app.use(cors()); // Disable custom CORS settings for debugging
 
 
-// Updated CORS configuration
-const allowedOrigins = [`${process.env.LOCAL_HOST_NAME}5173`, `${process.env.LOCAL_HOST_NAME}3000`,  `${process.env.LOCAL_HOST_NAME}5175`,`${process.env.LOCAL_HOST_NAME}3001`,];
+// Updated CORS configuration //const allowedOrigins = [`${process.env.LOCAL_HOST_NAME}5173`,`https://sharplogicians.com/`,`${process.env.LOCAL_HOST_NAME}`, 
+//`${process.env.LOCAL_HOST_NAME}3000`, `${process.env.LOCAL_HOST_NAME}5175`,`${process.env.LOCAL_HOST_NAME}3001`,];
+ const allowedOrigins = [
+  `${process.env.LOCAL_HOST_NAME}5173`, // For frontend (Vite, React Dev server)
+  'https://sharplogicians.com', // Production domain
+  'https://sharplogicians.com/new',
+  'https://sharplogicians.com/old/',
+  `${process.env.LOCAL_HOST_NAME}`, // Localhost without a port (e.g., http://localhost)
+  `${process.env.LOCAL_HOST_NAME}3000`, // For the Next.js app
+  `${process.env.LOCAL_HOST_NAME}5175` // Another frontend (optional if used)
+];
+
+
+
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin || allowedOrigins.includes(origin)) {
