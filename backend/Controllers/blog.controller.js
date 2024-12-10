@@ -15,7 +15,7 @@ export const createBlog= async(req,res)=>{
           title,
           content,
           author,
-          image: `${process.env.LOCAL_HOST_NAME}/${image}`,
+          image: `${process.env.LOCAL_HOST_NAME}${image}`,
           
         });
     
@@ -141,7 +141,7 @@ if(!mongoose.Types.ObjectId.isValid(id)){
       if (author) blogs.author = author;
 
       if (image){
-        blogs.image = `${process.env.LOCAL_HOST_NAME}/${image}`;
+        blogs.image = `${process.env.LOCAL_HOST_NAME}${image}`;
       }
       // Update the blog with the new data
       await blogs.save();

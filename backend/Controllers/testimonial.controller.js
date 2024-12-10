@@ -11,7 +11,7 @@ export const addTestimonial = async (req, res) => {
         companyName,
         comment,
         personName,
-        image: `${process.env.LOCAL_HOST_NAME}/${image}`, 
+        image: `${process.env.LOCAL_HOST_NAME}${image}`, 
       });
   
       await testimonial.save();
@@ -139,7 +139,7 @@ export const getTestimonial = async (req, res) => {
 
 
         if (image){
-            testimonial.image = `${process.env.LOCAL_HOST_NAME}/${image}`;
+            testimonial.image = `${process.env.LOCAL_HOST_NAME}${image}`;
         }
   
         await testimonial.save();

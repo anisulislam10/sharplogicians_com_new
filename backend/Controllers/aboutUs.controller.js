@@ -13,7 +13,7 @@ export const addAboutUs = async (req, res) => {
         description,
         mission,
         vision,
-        image: `${process.env.LOCAL_HOST_NAME}/${image}`, 
+        image: `${process.env.LOCAL_HOST_NAME}${image}`, 
       });
   
       await aboutus.save();
@@ -141,7 +141,7 @@ export const getAboutUs = async (req, res) => {
         
 
         if (image){
-           aboutus.image = `${process.env.LOCAL_HOST_NAME}/${image}`;
+           aboutus.image = `${process.env.LOCAL_HOST_NAME}${image}`;
         }
   
         await aboutus.save();
